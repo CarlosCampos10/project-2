@@ -16,7 +16,7 @@ FSJS project 2 - List Filter and Pagination
    will only be used inside of a function, then it can be locally 
    scoped to that function.
 ***/
-const studentList = document.querySelectorAll('student-item');
+const studentList = document.querySelectorAl('StudentperPage');
 const StudentsperPage = 10;
 
 
@@ -35,16 +35,20 @@ const StudentsperPage = 10;
        that will be passed into the parens later when you call or 
        "invoke" the function 
 ***/
-const showPage = (list, page) => {
-   let startIndex = (page * onPage) - onPage;
-   let endIndex = (page * onPage);
-   for (let i = 0; i < list.length; i += 1);
-   if (i >= start && i < end) {
-      list [i].style.display = 'block';
-   } else {
-      list[i].style.display = 'none';
+const studentList = document.querySelector("StudentsperPage");
+const studentItem = studentList.appendChild;
+const showPage = (list, pageNumber) => {
+   list = studentItem;
+   StudentsperPage = 10;
+   PagesperStudents = studentItem.lenght/ 10;
+   console.log(pageNumber);
+
+   for (let i = 0; i < list.length; i+= 1)
+   if (i >= StudentsperPage) {
+      list[i].style.display = "none";
    }
-   }
+
+
    /*
    Loop over items in the list parameter
    -- If the index of a list item is >= the index of the first
@@ -72,35 +76,37 @@ const showPage = (list, page) => {
    clicked link using event.target
    */
   const appendPageLinks = (list) => {
-   showPage (list,page-1);
-   let pages = Math.ceil(list.lenght/ StudentsperPage);
+   showPage (list,pageNumber);
+   let pages = Math.ceil(list.length/ StudentsperPage);
    const pagDiv = document.createElement('div');
    pagDiv.className = 'pagination';
+   pagDiv.appendChild(ul);
    const divPage = document.querySelector('div.page');
    divPage.appendChild(pagDiv);
   
   const ul = document.createElement('ul');
-  pagDiv.appendChild(ul);
   
-  for (let i = 0; i<list.length  += 1); 
-  {
-    let li = document.createElement('li');
-    
-    let a = document.createElement('a');
-    a.textContent = i + 1;
-    a.href = '#';
+  for (let i = 0; i<list.length  + 1 ;  {
+    let: li = document.createElement('li'), }
+    (li)() = document.createElement('a') ;{
+    textContent = i + 1,
+    a;href = '#',
   }
-    
-    ul.appendChild(li);
-    li.appendChild(a);
+
+  var node = document.getElementById(Li).lastChild;
+document.getElementById("Li").appendChild(node);
+    (ul).appendChild(li), 
+   
+    var node = document.getElementById("a").lastChild;
+document.getElementById("a").appendChild(node);
     
     a.addEventListener(click, (e) => {
       showPage(list, i + 1)
       e.target.className = 'active';
     }
-                      );
+                      ),
     
-    appendPageLinks(students);
+
 
 
 
