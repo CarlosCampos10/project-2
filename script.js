@@ -18,7 +18,9 @@ FSJS project 2 - List Filter and Pagination
 ***/
 const studentList = document.querySelectorAl('StudentperPage');
 const StudentsperPage = 10;
-
+document.addEventListener('DOMContentLoaded', () => {
+   const form = document.getElementById('registar');
+   const input = form.querySelector('input');
 
 
 /*** 
@@ -113,4 +115,4 @@ document.getElementById("a").appendChild(node);
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
 
 
-//https://drive.google.com/file/d/1OD1diUsTMdpfMDv677TfL1xO2CEkykSz/view?usp=sharing
+//https://drive.google.com/file/d/1OD1diUsTMdpfMDv677TfL1xO2CEkykSz/view?usp=sharing//
